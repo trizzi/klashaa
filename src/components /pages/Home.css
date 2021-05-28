@@ -1,0 +1,88 @@
+.btn {
+  display: inline-block;
+  background: var(--light-color);
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+/* .container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+} */
+
+/* Split the screen in half */
+.split {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+}
+
+/* Control the left side */
+.split-left {
+  left: 0;
+  height: 100vh;
+  width: 20vw;
+  background-color: #f5f5f5;
+  padding-top: 2rem;
+}
+
+/* Control the right side */
+.split-right {
+  right: 0;
+  height: 100vh;
+  width: 80vw;
+  background-color: #fff;
+}
+
+.split-left .img {
+  margin: 1rem 4rem;
+}
+
+.split-left .sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.split-left .sidebar h4 {
+  margin: 2rem 4.5rem;
+}
+
+.split-left .sidebar .sidebar-menu-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  margin: 0 2rem;
+}
+
+.split-left .sidebar .sidebar-menu-items li {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+}
+
+.split-left .sidebar .sidebar-menu-items li:hover {
+  color: #fff;
+}
+
+.split-left .sidebar .sidebar-menu-items li img {
+  font-size: 20px;
+  padding-right: 1rem;
+}
+
+.split-left .sidebar .sidebar-menu-items li a {
+  text-decoration: none;
+  color: #333;
+  padding-left: 1rem;
+}
