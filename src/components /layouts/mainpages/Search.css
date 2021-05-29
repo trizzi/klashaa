@@ -1,0 +1,66 @@
+.cut {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.cut .cut-left {
+  margin-right: 9rem;
+}
+
+.cut h4 {
+  left: 0;
+  padding: 0.4rem 0;
+}
+
+.cut .inputs {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.cut .inputs input {
+  padding: 0 2rem 0 1rem;
+}
+
+.date-btn {
+  display: inline-block;
+  background: #fff;
+  color: #333;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: #888 solid 1px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+.btnn {
+  display: inline-block;
+  background: #3d8f83;
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .cut .cut-left {
+    margin-right: 1rem;
+  }
+  .cut .inputs {
+    padding: 0;
+  }
+  .cut .inputs .date-btn {
+    display: none;
+  }
+}

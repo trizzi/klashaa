@@ -11,7 +11,7 @@ const Navbar = () => {
         <small>Today, 19th october 2020</small>
       </div>
       <div className='image-icon'>
-        <img src={notification} alt='' />
+        <img src={notification} alt='' className='img-1' />
         <img src={profile} alt='' />
       </div>
     </nav>

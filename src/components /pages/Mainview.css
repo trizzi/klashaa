@@ -1,0 +1,20 @@
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow-x: hidden;
+  padding: 0 2rem;
+}
+
+/* Control the right side */
+.split-right {
+  right: 0;
+  height: 100vh;
+  width: 80vw;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .split-right {
+    padding-left: 0;
+  }
+}

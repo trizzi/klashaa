@@ -8,7 +8,7 @@ import {
 } from 'react-table';
 
 const Styles = styled.div`
-  padding: 1rem;
+  padding: 2rem 0;
 
   .table {
     ${''}
@@ -17,10 +17,10 @@ const Styles = styled.div`
     overflow: auto;
 
     border-spacing: 0;
-    border: 1px solid black;
 
     .thead {
       ${''}
+
       overflow-y: auto;
       overflow-x: hidden;
     }
@@ -37,15 +37,16 @@ const Styles = styled.div`
         .td {
           border-bottom: 0;
         }
+        background-color: #f5f5f5;
       }
-      border-bottom: 1px solid black;
+      border-bottom: 0 solid black;
     }
 
     .th,
     .td {
       margin: 0;
       padding: 0.5rem;
-      border-right: 1px solid black;
+      border-right: 0 solid black;
 
       ${''}
       position: relative;

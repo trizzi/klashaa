@@ -2,8 +2,34 @@
   display: flex;
   justify-content: space-between;
   flex: 1;
+  margin-top: 2rem;
 }
 
 .navbar .navbar-left small {
-  color: #333;
+  color: #a6abb2;
+}
+
+.navbar .navbar-left {
+  font-weight: lighter;
+  color: #2a2a2a;
+}
+
+.navbar .image-icon {
+  display: flex;
+}
+
+.navbar .image-icon img {
+  padding: 0 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    margin-top: 1rem;
+  }
+  .navbar .image-icon img {
+    padding: 0;
+  }
+  .navbar .image-icon .img-1 {
+    display: none;
+  }
 }

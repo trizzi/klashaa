@@ -1,45 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Logo from '../../logo.png';
-import '../../App.css';
-import '../pages/Home.css';
-import { Mainpage } from '../layouts/mainpages/Mainpage';
-import Navbar from '../layouts/mainpages/Navbar';
-import Cards from '../layouts/mainpages/Cards';
-import Search from '../layouts/mainpages/Search';
-import Tables from '../layouts/mainpages/tables/Tables';
+import React, { Component } from 'react';
+import DrawerButton from '../pages/DrawerButton';
+import Sidedrawer from './Sidedrawer';
+import Mainview from './Mainview';
 
-const Home = () => {
-  return (
-    <div className='split'>
-      <div className='split-left'>
-        <img src={Logo} alt='' className='img' />
-        <div className='sidebar'>
-          <h4>Main Pages</h4>
-          <ul className='sidebar-menu-items btn'>
-            {Mainpage.map((item) => {
-              return (
-                <li
-                  key={item.id}
-                  className={item.className}>
-                  <Link to={item.path}>
-                    {item.img}
-                    <span>{item.title}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+class Home extends Component {
+  state = {
+    sideDrawerOpen: false,
+  };
+  drawerToggleClickHandler = () => {
+    console.log('Clicked!');
+    this.setState((prevState) => {
+      return {
+        sideDrawerOpen: !prevState.sideDrawerOpen,
+      };
+    });
+  };
+
+  render() {
+    // let sideDrawer;
+    // let backdrop;
+
+    // if (this.state.sideDrawerOpen) {
+    //   sideDrawer = <Sidedrawer />;
+    //   backdrop = <Mainview />;
+    // }
+    return (
+      <div className='split'>
+        <div className='hamburger'>
+          <DrawerButton
+            onClick={this.drawerToggleClickHandler}
+          />
         </div>
+        {this.state.sideDrawerOpen && <Mainview />}
+        {this.state.sideDrawerOpen && <Sidedrawer />}
       </div>
-      <div className='split-right container'>
-        <Navbar />
-        <Cards />
-        <Search />
-        <Tables />
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Home;
